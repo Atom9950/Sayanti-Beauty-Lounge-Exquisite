@@ -1,0 +1,124 @@
+<h3 class="fw-normal text-muted mb-3">Hair & Beauty Expert</h3>
+          <div class="d-flex gap-3 justify-content-center lead fw-normal">
+            <a class="icon-link text-light"  href="#about">
+              Learn more
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+            <a class="icon-link text-light" href="./index.html">
+              Book Now
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+
+          col-6 mx-auto
+
+          
+
+
+          .parallax::after{
+    background-image: url("DSC_5700.JPG");
+    min-height: 1200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    inset: 0;
+    isolation: isolate;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+
+    border-bottom-left-radius: 70px; 
+    border-bottom-right-radius: 70px; 
+    overflow: hidden;
+  }
+
+  
+  p{
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,            
+  }
+
+  h1{
+    color: #fff;
+    text-shadow: 0 0 3px rgb(255, 183, 0),
+                 0 0 0px rgb(255, 183, 0),
+                 0 0 0px #fff          
+  }
+  
+  body .navbar{
+    position: fixed;
+    width: 100%;
+    opacity: .8;
+  }
+
+
+  .btn:hover{
+    box-shadow: 0px 8px 30px white;
+    transform: scale(1.01)
+  }
+
+  .player {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    width: 860px; /* Default width */
+    height: 500px; /* Default height */
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.player iframe {
+    box-shadow: 0 0 5px #ffc800, 0 0 5px #fcfcfc, 0 0 0px #ffc800;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+@media (max-width: 1200px) {
+    .player {
+        width: 720px; 
+        height: 405px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .player {
+        width: 640px; 
+        height: 360px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .player {
+        width: 560px; 
+        height: 315px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .player {
+        width: 480px; 
+        height: 270px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .player {
+        width: 100%; 
+        height: auto; 
+        max-width: 360px;
+    }
+}
+
+
+
+
+
+<div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
+
+<div>Icons made from <a href="https://www.onlinewebfonts.com/icon">svg icons</a>is licensed by CC BY 4.0</div>
