@@ -1,0 +1,375 @@
+.parallax::after {
+    background-image: url(DSC_57002.JPG);
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    inset: 0;
+    isolation: isolate;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.6;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+    .parallax::after {
+        background-position: center top;
+    }
+
+    .heading {
+        padding: 4rem 2rem;
+    }
+
+    .col-lg-5 {
+        margin-top: 2rem;
+    }
+
+    .logo {
+        height: 90px;
+        width: 135px;
+    }
+}
+
+@media (max-width: 992px) {
+    .parallax::after {
+        background-attachment: scroll; /* Disable parallax on smaller screens for performance */
+        background-size: contain;
+    }
+
+    .heading {
+        padding: 3rem 1rem;
+    }
+
+    .col-lg-5 {
+        margin-top: 1.5rem;
+    }
+
+    .logo {
+        height: 80px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax::after {
+        min-height: 700px; /* Adjust height for smaller screens */
+        background-size: cover;
+    }
+
+    .heading {
+        padding: 2rem 1rem;
+    }
+
+    .logo {
+        height: 70px;
+        width: 105px;
+    }
+}
+
+@media (max-width: 576px) {
+    .parallax::after {
+        min-height: 500px;
+        background-size: cover;
+    }
+
+    .heading {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .logo {
+        height: 60px;
+        width: 90px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax::after {
+        min-height: 400px;
+        background-size: cover;
+    }
+
+    .heading {
+        padding: 1rem 0.5rem;
+    }
+
+    .logo {
+        height: 50px;
+        width: 75px;
+        top: 10px;
+        left: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+}
+
+p {
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 0 0 3px rgb(255, 183, 0), 0 0 0px rgb(255, 183, 0), 0 0 0px #fff;
+}
+
+
+
+
+  
+  body .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 5px;
+    opacity: .8;
+  }
+
+  .nav-link:hover{
+    color: #ffc800;
+  }
+
+  .player {
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    width: 860px; /* Default width */
+    height: 500px; /* Default height */
+    margin: 0 auto;
+    margin-bottom: 200px;
+}
+
+.player iframe {
+    box-shadow: 0 0 5px #ffc800, 0 0 5px #fcfcfc, 0 0 0px #ffc800;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+@media (max-width: 1200px) {
+    .player {
+        width: 720px; 
+        height: 405px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .player {
+        width: 640px; 
+        height: 360px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .player {
+        width: 560px; 
+        height: 315px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .player {
+        width: 480px; 
+        height: 270px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .player {
+        width: 100%; 
+        height: auto; 
+        max-width: 360px;
+    }
+}
+
+
+
+.features {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(premium_photo-1661726457110-c43a88d74567.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .features::before {
+        background-attachment: fixed;
+        background-size: cover;
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .features::before {
+        background-attachment: fixed;
+        background-size: cover;
+        border-radius: 20px;
+    }
+}
+
+.abc {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.abc::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(DSC_5288.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .abc::before {
+        
+        background-size: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .abc::before {
+        background-size: cover;
+        border-radius: 5px;
+    }
+}
+
+body {
+    background-color: black;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.642);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.icon-link::after {
+    content: '>';
+    margin-left: -20px;
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover::after {
+    transform: translateX(5px);
+}
+
+.icon-link:hover {
+    color: #ffc800;
+}
+
+.text-body-white {
+    opacity: 0.8;
+}
+
+.feature-icon-small {
+    height: 1.5em;
+    width: 1.5em;
+}
+
+#toggleReadMore {
+    color: #fcfcfc;
+}
+
+#toggleReadMore:hover {
+    color: #ffc800;
+}
+
+.table-responsive {
+    background-color: rgb(33, 37, 41);
+    border-radius: 10px;
+}
+
+footer {
+    padding-bottom: 1000px;
+    margin-top: 150px;
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.social-icons a i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #ffc800;
+}
+
+#services h2 {
+    border-bottom-color: white !important;
+}
