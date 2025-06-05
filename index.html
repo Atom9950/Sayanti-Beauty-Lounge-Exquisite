@@ -401,15 +401,63 @@
 </div>
 
 <script>
+// Replace your current toggle script with this optimized version
 document.getElementById("toggleButton").addEventListener("click", function() {
-  const hairMakeupSection = document.getElementById("hairMakeupSection");
-  const isHidden = hairMakeupSection.style.display === "none";
+  const section = document.getElementById("hairMakeupSection");
+  const features = document.querySelector(".features");
   
-  // Use requestAnimationFrame for smoother transitions
+  // Add temporary class during animation
+  features.classList.add("animating");
+  
+  // Use requestAnimationFrame for smoother toggling
   requestAnimationFrame(() => {
-    hairMakeupSection.style.display = isHidden ? "block" : "none";
-    this.textContent = isHidden ? "View Less" : "View All";
+    if (section.style.display === "none" || !section.style.display) {
+      section.style.display = "block";
+      this.textContent = "View Less";
+    } else {
+      section.style.display = "none";
+      this.textContent = "View All";
+    }
+    
+    // Force synchronous layout calculation
+    void section.offsetHeight;
+    
+    // Remove animation class after a delay
+    setTimeout(() => features.classList.remove("animating"), 300);
   });
+});
+
+// Add this scroll optimization
+let lastScroll = 0;
+let ticking = false;
+
+window.addEventListener('scroll', function() {
+  lastScroll = window.scrollY;
+  
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      // Your scroll-related code (if any)
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+// Debounce resize events
+let resizeTimeout;
+window.addEventListener('resize', function() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(function() {
+    // Your resize-related code
+  }, 250);
+});
+
+window.addEventListener('scroll', function() {
+  document.body.classList.add('disable-hover');
+  clearTimeout(window.scrollTimer);
+  window.scrollTimer = setTimeout(function() {
+    document.body.classList.remove('disable-hover');
+  }, 100);
 });
 </script>
 
