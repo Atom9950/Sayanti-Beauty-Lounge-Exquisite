@@ -1,7 +1,6 @@
 .parallax::after {
     background-image: url(DSC_57002.JPG);
     min-height: 1000px;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,6 +8,7 @@
     inset: 0;
     isolation: isolate;
     position: absolute;
+    background-attachment: scroll; /* Remove fixed attachment */
     z-index: -1;
     opacity: 0.6;
     border-bottom-left-radius: 50px;
