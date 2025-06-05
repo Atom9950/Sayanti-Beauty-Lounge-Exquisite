@@ -401,16 +401,16 @@
 </div>
 
 <script>
-  document.getElementById("toggleButton").addEventListener("click", function() {
-    var hairMakeupSection = document.getElementById("hairMakeupSection");
-    if (hairMakeupSection.style.display === "none") {
-      hairMakeupSection.style.display = "block";
-      this.textContent = "View Less";
-    } else {
-      hairMakeupSection.style.display = "none";
-      this.textContent = "View All";
-    }
+document.getElementById("toggleButton").addEventListener("click", function() {
+  const hairMakeupSection = document.getElementById("hairMakeupSection");
+  const isHidden = hairMakeupSection.style.display === "none";
+  
+  // Use requestAnimationFrame for smoother transitions
+  requestAnimationFrame(() => {
+    hairMakeupSection.style.display = isHidden ? "block" : "none";
+    this.textContent = isHidden ? "View Less" : "View All";
   });
+});
 </script>
 
 
